@@ -42,7 +42,7 @@ yd = [y1,y2]
 net = nn.Sequential(ParzenWindow(1,1))
 optimizer = opt.SGD(net.parameters(),lr=0.005)
 
-for e in range(0):#6000
+for e in range(6000):
     trainon(xd,yd,e,net)
 
 xs,ys = test(4.0,0.1,net)
@@ -51,6 +51,7 @@ plt.figure(1)
 plt.plot(xs,ys)
 plt.title("Test 1")
 #plt.savefig('./Plots/test_1.png',bbox_inches='tight')
+plt.show()
 
 print("-----SECOND-----")
 #Second case: More complexity 4 positive numbers(unnormalized)
@@ -74,6 +75,7 @@ plt.figure(2)
 plt.plot(xs,ys)
 plt.title("Test 2")
 #plt.savefig('./Plots/test_2.png',bbox_inches='tight')
+plt.show()
 
 print("-----THIRD-----")
 #Third case: Added 3 negative numbers -3,-5,-6(unnormalized)
@@ -98,7 +100,8 @@ xs,ys = test(6.0,0.1,net)
 plt.figure(3)
 plt.plot(xs,ys)
 plt.title("Test 3")
-plt.savefig('./Plots/test_3.png',bbox_inches='tight')
+#plt.savefig('./Plots/test_3.png',bbox_inches='tight')
+plt.show()
 
 print("-----FOURTH-----")
 #Fourth case: A little more complexity
@@ -119,7 +122,8 @@ xs,ys = test(6.0,0.1,net)
 plt.figure(4)
 plt.plot(xs,ys)
 plt.title("Test 4")
-plt.savefig('./Plots/test_4.png',bbox_inches='tight')
+#plt.savefig('./Plots/test_4.png',bbox_inches='tight')
+plt.show()
 
 print("-----FIFTH-----")
 #Fifth case: Big positive number: 30
@@ -140,7 +144,8 @@ xs,ys = test(30.0,0.5,net)
 plt.figure(5)
 plt.plot(xs,ys)
 plt.title("Test 5")
-plt.savefig('./Plots/test_5.png',bbox_inches='tight')
+#plt.savefig('./Plots/test_5.png',bbox_inches='tight')
+plt.show()
 
 print("-----SIXTH-----")
 #Fifth case: Big negative number: -45.5
@@ -164,3 +169,4 @@ plt.figure(6)
 plt.plot(xs,ys)
 plt.title("Test 6")
 #plt.savefig('./Plots/test_6.png',bbox_inches='tight')
+plt.show()
